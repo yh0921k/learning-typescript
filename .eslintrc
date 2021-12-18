@@ -3,7 +3,7 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
-    "no-loops"
+    // "no-loops"
   ],
   "extends": [
     "eslint:recommended",
@@ -11,8 +11,8 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "no-console": 1,
-    "no-loops/no-loops": 1,
+    // "no-console": 1,
+    // "no-loops/no-loops": 1,
     "@typescript-eslint/no-explicit-any": "off",
     "prefer-const": "off"
   }
