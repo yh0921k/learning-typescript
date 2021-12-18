@@ -1,3 +1,5 @@
+let todoItems;
+
 // api
 function fetchTodoItems() {
   const todos = [
@@ -46,6 +48,6 @@ function log() {
   console.log(todoItems);
 }
 
-const todoItems = fetchTodoItems();
+todoItems = fetchTodoItems();
 addTwoTodoItems();
 log();
