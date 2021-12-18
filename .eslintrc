@@ -12,6 +12,8 @@
   ],
   "rules": {
     "no-console": 1,
-    "no-loops/no-loops": 1
+    "no-loops/no-loops": 1,
+    "@typescript-eslint/no-explicit-any": "off",
+    "prefer-const": "off"
   }
 }
