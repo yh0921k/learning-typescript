@@ -2,4 +2,11 @@
 function sum(a: number, b: number): number {
   return a + b;
 }
-sum(10, 20, 30, 40, 50);
+
+// 함수의 옵셔널 파라미터
+function log(a: string, b?: string, c?: string) {
+  return;
+}
+
+log('a');
+log('a', 'b', 'c');
