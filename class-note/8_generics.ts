@@ -27,11 +27,20 @@
 // logText('a');
 // const num = logNumber(10);
 
-function logText(text: string | number) {
-  console.log(text);
-  // text.split('').reverse().join('');
+// function logText(text: string | number) {
+//   console.log(text);
+//   // text.split('').reverse().join('');
+//
+//   return text;
+// }
+// const a = logText('a');
+// logText(10);
 
+function logText<T>(text: T): T {
+  console.log(text);
   return text;
 }
-const a = logText('a');
-logText(10);
+const str = logText<string>('abc');
+console.log(str.split(''));
+
+const flag = logText<boolean>(true);
