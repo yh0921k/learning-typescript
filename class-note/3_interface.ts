@@ -52,3 +52,19 @@ let obj: StringRegexDictionary = {
 Object.keys(obj).forEach(function (value) {
   console.log(value);
 });
+
+// 인터페이스 확장
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface Developer extends Person {
+  language: string;
+}
+
+let yong: Developer = {
+  language: 'TS',
+  age: 100,
+  name: 'yong',
+};
