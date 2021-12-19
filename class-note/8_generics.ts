@@ -72,12 +72,25 @@
 // logTextLength(['hello', 'hi']);
 
 // 정의된 타입 이용하기
-interface LengthType {
-  length: number;
+// interface LengthType {
+//   length: number;
+// }
+// function logTextLength<T extends LengthType>(text: T): T {
+//   text.length;
+//   return text;
+// }
+// logTextLength('aaa');
+// logTextLength({ length: 10 });
+
+// keyof
+interface ShoppingItem {
+  name: string;
+  price: number;
+  stock: number;
 }
-function logTextLength<T extends LengthType>(text: T): T {
-  text.length;
-  return text;
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption: T): T {
+  return itemOption;
 }
-logTextLength('aaa');
-logTextLength({ length: 10 });
+// getShoppingItemOption(10);
+// getShoppingItemOption<string>('a');
+getShoppingItemOption('name');
