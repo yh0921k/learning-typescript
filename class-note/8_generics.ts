@@ -62,11 +62,22 @@
 // };
 
 // 제네릭의 타입 제한
-function logTextLength<T>(text: T[]): T[] {
-  console.log(text.length);
-  text.forEach(function (text) {
-    console.log(text);
-  });
+// function logTextLength<T>(text: T[]): T[] {
+//   console.log(text.length);
+//   text.forEach(function (text) {
+//     console.log(text);
+//   });
+//   return text;
+// }
+// logTextLength(['hello', 'hi']);
+
+// 정의된 타입 이용하기
+interface LengthType {
+  length: number;
+}
+function logTextLength<T extends LengthType>(text: T): T {
+  text.length;
   return text;
 }
-logTextLength(['hello', 'hi']);
+logTextLength('aaa');
+logTextLength({ length: 10 });
