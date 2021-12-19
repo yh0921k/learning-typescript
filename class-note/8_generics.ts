@@ -52,11 +52,21 @@
 // }
 // const obj: Dropdown = { value: 'abc', selected: false };
 
-interface Dropdown<T> {
-  value: T;
-  selected: boolean;
+// interface Dropdown<T> {
+//   value: T;
+//   selected: boolean;
+// }
+// const obj: Dropdown<number> = {
+//   value: 100,
+//   selected: true,
+// };
+
+// 제네릭의 타입 제한
+function logTextLength<T>(text: T[]): T[] {
+  console.log(text.length);
+  text.forEach(function (text) {
+    console.log(text);
+  });
+  return text;
 }
-const obj: Dropdown<number> = {
-  value: 100,
-  selected: true,
-};
+logTextLength(['hello', 'hi']);
