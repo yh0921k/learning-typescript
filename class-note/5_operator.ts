@@ -29,7 +29,12 @@ interface Person {
   age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
+// function askSomeone(someone: Developer | Person) {
+//   console.log(someone.name);
+//   // console.log(someone.age); // Error
+// }
+
+function askSomeone(someone: Developer & Person) {
   console.log(someone.name);
-  // console.log(someone.age); // Error
+  console.log(someone.age); // OK
 }
