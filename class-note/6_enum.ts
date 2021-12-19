@@ -1,7 +1,7 @@
 enum Shoes {
-  Nike,
-  Adidas,
+  Nike = 'nike',
+  Adidas = 'adidas',
 }
 
 let myShoes = Shoes.Nike;
-console.log(myShoes); // 0
+console.log(myShoes); // 'nike'
