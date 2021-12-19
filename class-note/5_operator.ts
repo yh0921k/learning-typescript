@@ -18,3 +18,18 @@ function logMessage(value: string | number) {
 
 logMessage('hello');
 logMessage(199);
+
+interface Developer {
+  name: string;
+  skill: string;
+}
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+function askSomeone(someone: Developer | Person) {
+  console.log(someone.name);
+  // console.log(someone.age); // Error
+}
