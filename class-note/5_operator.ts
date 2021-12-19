@@ -33,8 +33,13 @@ interface Person {
 //   console.log(someone.name);
 //   // console.log(someone.age); // Error
 // }
+//
+// askSomeone({ name: 'name', age: 100 });
+// askSomeone({ name: 'dev', skill: 'Spring' });
 
 function askSomeone(someone: Developer & Person) {
   console.log(someone.name);
   console.log(someone.age); // OK
 }
+
+askSomeone({ name: 'name', age: 100, skill: 'spring' });
