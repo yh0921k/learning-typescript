@@ -14,16 +14,24 @@
 // logText('Hi');
 // logText(true);
 
-function logText(text: string) {
+// function logText(text: string) {
+//   console.log(text);
+//   // text.split('').reverse().join('');
+//   return text;
+// }
+//
+// function logNumber(num: number) {
+//   console.log(num);
+//   return num;
+// }
+// logText('a');
+// const num = logNumber(10);
+
+function logText(text: string | number) {
   console.log(text);
   // text.split('').reverse().join('');
+
   return text;
 }
-
-function logNumber(num: number) {
-  console.log(num);
-  return num;
-}
-
-logText('a');
-const num = logNumber(10);
+const a = logText('a');
+logText(10);
