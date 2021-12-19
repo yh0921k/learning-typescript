@@ -36,11 +36,27 @@
 // const a = logText('a');
 // logText(10);
 
-function logText<T>(text: T): T {
-  console.log(text);
-  return text;
-}
-const str = logText<string>('abc');
-console.log(str.split(''));
+// function logText<T>(text: T): T {
+//   console.log(text);
+//   return text;
+// }
+// const str = logText<string>('abc');
+// console.log(str.split(''));
+//
+// const flag = logText<boolean>(true);
 
-const flag = logText<boolean>(true);
+// 인터페이스에 제네릭을 선언하는 방법
+// interface Dropdown {
+//   value: string;
+//   selected: boolean;
+// }
+// const obj: Dropdown = { value: 'abc', selected: false };
+
+interface Dropdown<T> {
+  value: T;
+  selected: boolean;
+}
+const obj: Dropdown<number> = {
+  value: 100,
+  selected: true,
+};
