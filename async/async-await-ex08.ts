@@ -17,8 +17,10 @@ function asyncFunction02() {
 }
 
 async function getData() {
-  const data1 = await asyncFunction01();
-  const data2 = await asyncFunction02();
+  const p1 = asyncFunction01();
+  const p2 = asyncFunction02();
+  const data1 = await p1;
+  const data2 = await p2;
   console.log({ data1, data2 });
 }
 getData();

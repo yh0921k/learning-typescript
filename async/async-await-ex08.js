@@ -52,13 +52,16 @@ function asyncFunction02() {
 }
 function getData() {
     return __awaiter(this, void 0, void 0, function () {
-        var data1, data2;
+        var p1, p2, data1, data2;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, asyncFunction01()];
+                case 0:
+                    p1 = asyncFunction01();
+                    p2 = asyncFunction02();
+                    return [4 /*yield*/, p1];
                 case 1:
                     data1 = _a.sent();
-                    return [4 /*yield*/, asyncFunction02()];
+                    return [4 /*yield*/, p2];
                 case 2:
                     data2 = _a.sent();
                     console.log({ data1: data1, data2: data2 });
